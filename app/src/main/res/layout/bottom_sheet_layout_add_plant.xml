@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/movdeschisbckground"
+    >
+
+    <ImageView
+        android:id="@+id/imagineAdaugaPlanta"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/adauga_planta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="4dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextNickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/alt_gri_mai_inchis"
+
+        android:hint="Porecla"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagineAdaugaPlanta"
+        android:layout_marginTop="-16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:textColorHint="@color/alt_gri_mai_inchis"
+        android:textSize="14sp"
+        android:hint="Numele Stiintific"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNickname"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        />
+
+    <Button
+        android:id="@+id/add_photo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adauga poza plantei"
+        android:textStyle="italic"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/un_mov_part2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlant" />
+
+    <ImageView
+        android:id="@+id/imageViewPlant"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:layout_marginTop="8dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
+        app:srcCompat="@drawable/cactus_dansator" />
+
+    <EditText
+        android:id="@+id/editTextLight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/alt_gri_mai_inchis"
+        android:ems="10"
+        android:textSize="14sp"
+        android:hint="Preferinta la lumina"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewLight"
+        app:layout_constraintTop_toBottomOf="@+id/add_photo_button"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="24dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewLight"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Preferinta ei la lumina: (semi-lumina/multa etc)"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/add_photo_button" />
+
+
+
+
+
+    <TextView
+        android:id="@+id/textViewWater"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Intervalul la care trebuie udata: (X zile/saptamani)"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLight" />
+
+    <EditText
+        android:id="@+id/editTextWater"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="14sp"
+        android:hint="Preferinta la apa"
+        android:textColor="@color/black"
+        android:textColorHint="@color/alt_gri_mai_inchis"
+
+
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewLight"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLight"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="24dp"
+        />
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continua"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/fuchsia_chestie"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWater"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="40dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
